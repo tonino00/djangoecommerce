@@ -1,3 +1,5 @@
+# coding=utf-8
+
 from django.db import models
 from django.urls import reverse
 
@@ -43,4 +45,4 @@ class Product(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse("catalog:product", kwargs={"slug": self.slug})
+        return reverse('catalog:product', kwargs={'slug': self.slug})
